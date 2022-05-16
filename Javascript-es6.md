@@ -20,6 +20,7 @@ l //This prints test
 let is a new keyword to declare variables, and the difference with var is that let is safer, when we define a let in a block, the let will only be accessible within the scope of the block.
 3. const key word
 const keyword behaves like let, we use const when the reference assigned to a variable, wont change. We talk about the reference not the value, cause the value is not immutable, it just means constant reference to our object. Integers and strings are immutable in javascript, but arrays are not, so if we assigne an array to a const, the reference to the array stays the samem, but the content may change.
+```js
 const answer1 = 42;
 
 /*
@@ -41,3 +42,4 @@ let answer2 = 42;
 */
 
 answer2; // might have changed;
+```
