@@ -8,12 +8,12 @@ In this document we will have a synthese of new features of modern javascript cr
 
 {{{}}} these are nested block scopes, it applies to if blocks or loop blocks, it is different from functions blocks, and the difference is that if we define a var in a function block, it can't be accessible outside of the function scope. But the unique thing, is that if we define a var in a block scope (not a function block), this variable is accessible outside of the scope.
 
-```diff
-+if (true) {
-+  // Block Scope
-+  var l='test';
-+}
-+l //This prints test
+```js
+if (true) {
+  // Block Scope
+  var l='test';
+}
+l //This prints test
 ```
 
 2. let key word
