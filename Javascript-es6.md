@@ -73,7 +73,7 @@ const obj = {
   f1() {},
   f2: () => {},
   [mystery]: 42,//This is a dynamic property.
-  InverseOfPI, // this can have a shorter syntax of InverseOfPI: InverseOfPi,
+  InverseOfPI, // this is a shorter syntax of InverseOfPI: InverseOfPi,
 };
 
 console.log(obj.mystery) //this will print indefined, cause the mystery property will be evaluated, and whatever the mystery value is evaluated to will become the property.
