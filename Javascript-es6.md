@@ -3,7 +3,7 @@
 In this document we will have a synthese of new features of modern javascript crash course exposed in pluralsight course React: getting started
 
 # New features
-```diff
+```diff-
 1. Nested block scopes:
 ```
 {{{}}} these are nested block scopes, it applies to if blocks or loop blocks, it is different from functions blocks, and the difference is that if we define a var in a function block, it can't be accessible outside of the function scope. But the unique thing, is that if we define a var in a block scope (not a function block), this variable is accessible outside of the scope.
@@ -15,7 +15,7 @@ if (true) {
 }
 l //This prints test
 ```
-```diff
+```diff-
 2. let key word
 ```
 let is a new keyword to declare variables, and the difference with var is that let is safer, when we define a let in a block, the let will only be accessible within the scope of the block.
