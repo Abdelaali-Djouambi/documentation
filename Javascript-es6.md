@@ -158,7 +158,7 @@ In javaScript we can define strings using '' or "", they are equivalent. There's
 const html= `<div>${}</div>`
 ```
 
-######9.Classes
+###### 9.Classes
 
 JavaScript offers the Object Oriented Programing paradigme, es6 added support for the class syntax, where it is a template or blueprint for objects sharing methods and attributes. A class can extend another class.
 
@@ -191,4 +191,4 @@ o1.greet();
 o2.greet();
 o3.greet();
 ```
-######10.Promis
+###### 10.Promis
