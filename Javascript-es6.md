@@ -8,12 +8,13 @@ In this document we will have a synthese of new features of modern javascript cr
 
 {{{}}} these are nested block scopes, it applies to if blocks or loop blocks, it is different from functions blocks, and the difference is that if we define a var in a function block, it can't be accessible outside of the function scope. But the unique thing, is that if we define a var in a block scope (not a function block), this variable is accessible outside of the scope.
 
-
+![#f03c15]
 if (true) {
   // Block Scope
   var l='test';
 }
-l
+l //This prints test
+`#f03c15`
 
 2. let key word
 let is a new keyword to declare variables, and the difference with var is that let is safer, when we define a let in a block, the let will only be accessible within the scope of the block.
