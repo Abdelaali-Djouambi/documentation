@@ -3,9 +3,9 @@
 In this document we will have a synthese of new features of modern javascript crash course exposed in pluralsight course React: getting started
 
 # New features
-
+```diff
 1. Nested block scopes:
-
+```
 {{{}}} these are nested block scopes, it applies to if blocks or loop blocks, it is different from functions blocks, and the difference is that if we define a var in a function block, it can't be accessible outside of the function scope. But the unique thing, is that if we define a var in a block scope (not a function block), this variable is accessible outside of the scope.
 
 ```js
@@ -15,9 +15,13 @@ if (true) {
 }
 l //This prints test
 ```
+```diff
 2. let key word
+```
 let is a new keyword to declare variables, and the difference with var is that let is safer, when we define a let in a block, the let will only be accessible within the scope of the block.
+```diff
 3. const key word
+```
 const keyword behaves like let, we use const when the reference assigned to a variable, wont change. We talk about the reference not the value, cause the value is not immutable, it just means constant reference to our object. Integers and strings are immutable in javascript, but arrays are not, so if we assigne an array to a const, the reference to the array stays the samem, but the content may change.
 ```js
 const answer1 = 42;
@@ -34,7 +38,9 @@ let answer2 = 42;
 */
 answer2; // might have changed;
 ```
+```diff
 4. arrow functions
+```
 It is a way to define a function without the keyword function, but usiong ```js () => {//logic}```, the difference is that an arrow function cares about the caller, so this keyword is the caller of the function, in the other hand, this keyword returns the scope of the function in the arrow function.
 ```js
 const X = function() {
@@ -56,7 +62,9 @@ const Y = () => {
   
   */
 ```
+```diff
 5. Object literals
+```
 Objects are very used in java, they are used to manage and comunicate date, the difinition of objects can be made in different ways, but the most common is using object literal. they also support dynamic properties like in the example.
 ```js
 const mystery = 'answer';
@@ -74,8 +82,9 @@ const obj = {
 console.log(obj.mystery) //this will print indefined, cause the mystery property will be evaluated, and whatever the mystery value is evaluated to will become the property.
 console.log(obj.answer)//this will print 42, because the evaluated value of mystery is answer.
 ```
+```diff
 6.Desctructuring
-
+```
 Destructuring is a way of retrieving values of attributes from objects
 ```js
 //Instead of retrieving values of Math.property like the following
@@ -111,8 +120,9 @@ const [first, second,, forth] = [10, 20, 30, 40];
 
 const [value, setValue] = useState(initialValue);
 ```
+```diff
 7.Rest spread
-
+```
 We can destructure arrays, and that gives us a way to split the content of an array onto multiple variables or arrays
 ```js
 const [first, ...restOfItems] = [10, 20, 30, 40];
@@ -142,14 +152,17 @@ const newObject = {
 ```diff
 - Note that the copies are shallow and the nested objects are shared between the copies
 ```
+```diff
 7.Template Strings
-
+```
 In javaScript we can define strings using '' or "", they are equivalent. There's a new way of defining strings, and its the backtick `` (alt-gr + 7)
 ```js
 //this is called a template string, they can be used as a template with dynamique values, they support interpolation, we can inject javascript dynamic expressions by using ${}. We can also have multiple lines in a String.
 const html= `<div>${}</div>`
 ```
+```diff
 8.Classes
+```
 JavaScript offers the Object Oriented Programing paradigme, es6 added support for the class syntax, where it is a template or blueprint for objects sharing methods and attributes. A class can extend another class.
 
 ```js
