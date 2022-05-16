@@ -139,4 +139,6 @@ const newObject = {
   ...person
 }
 ```
+```diff
 - Note that the copies are shallow and the nested objects are shared between the copies
+```
