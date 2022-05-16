@@ -139,4 +139,4 @@ const newObject = {
   ...person
 }
 ```
--Note that the copies are shallow and the nested objects are shared between the copies
+- Note that the copies are shallow and the nested objects are shared between the copies
