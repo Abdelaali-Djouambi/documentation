@@ -142,3 +142,42 @@ const newObject = {
 ```diff
 - Note that the copies are shallow and the nested objects are shared between the copies
 ```
+7.Template Strings
+
+In javaScript we can define strings using '' or "", they are equivalent. There's a new way of defining strings, and its the backtick `` (alt-gr + 7)
+```js
+//this is called a template string, they can be used as a template with dynamique values, they support interpolation, we can inject javascript dynamic expressions by using ${}. We can also have multiple lines in a String.
+const html= `<div>${}</div>`
+```
+8.Classes
+JavaScript offers the Object Oriented Programing paradigme, es6 added support for the class syntax, where it is a template or blueprint for objects sharing methods and attributes. A class can extend another class.
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello ${this.name}!`);
+  }
+}
+
+class Student extends Person {
+  constructor(name, level) {
+    super(name);
+    this.level = level;
+  }
+  greet() {
+    console.log(`Hello ${this.name} from ${this.level}`);
+  }
+}
+
+const o1 = new Person("Max");
+const o2 = new Student("Tina", "1st Grade");
+const o3 = new Student("Mary", "2nd Grade");
+o3.greet = () => console.log('I am special!');
+
+o1.greet();
+o2.greet();
+o3.greet();
+```
