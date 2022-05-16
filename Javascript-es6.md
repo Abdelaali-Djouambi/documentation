@@ -76,7 +76,7 @@ const obj = {
   InverseOfPI, // this is a shorter syntax of InverseOfPI: InverseOfPi,
 };
 
-console.log(obj.mystery) //this will print indefined, cause the mystery property will be evaluated, and whatever the mystery value is evaluated to will become the property.
+console.log(obj.mystery) //this will print undefined, cause the mystery property will be evaluated, and whatever the mystery value is evaluated to will become the property.
 console.log(obj.answer)//this will print 42, because the evaluated value of mystery is answer.
 ```
 
