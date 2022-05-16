@@ -36,7 +36,7 @@ let answer2 = 42;
 answer2; // might have changed;
 ```
 
-##### 4. arrow functions
+##### 4. Arrow functions
 
 It is a way to define a function without the keyword function, but usiong ```js () => {//logic}```, the difference is that an arrow function cares about the caller, so this keyword is the caller of the function, in the other hand, this keyword returns the scope of the function in the arrow function.
 ```js
@@ -80,7 +80,7 @@ console.log(obj.mystery) //this will print indefined, cause the mystery property
 console.log(obj.answer)//this will print 42, because the evaluated value of mystery is answer.
 ```
 
-##### 6.Desctructuring
+##### 6. Desctructuring
 
 Destructuring is a way of retrieving values of attributes from objects
 ```js
@@ -118,7 +118,7 @@ const [first, second,, forth] = [10, 20, 30, 40];
 const [value, setValue] = useState(initialValue);
 ```
 
-##### 7.Rest spread
+##### 7. Rest spread
 
 We can destructure arrays, and that gives us a way to split the content of an array onto multiple variables or arrays
 ```js
@@ -150,7 +150,7 @@ const newObject = {
 - Note that the copies are shallow and the nested objects are shared between the copies
 ```
 
-##### 8.Template Strings
+##### 8. Template Strings
 
 In javaScript we can define strings using '' or "", they are equivalent. There's a new way of defining strings, and its the backtick `` (alt-gr + 7)
 ```js
@@ -191,4 +191,31 @@ o1.greet();
 o2.greet();
 o3.greet();
 ```
-##### 10.Promis
+##### 10. Promises and Async/Await
+For asynchronus calls, we use the fetch keyword to get data and it returns a promise, and the data will come asynchronesly to the program, we supply a .then to consume the promise, and supply a callback function, and this function will receive the data of the promise.
+
+```js
+const fetchData = () => {
+  fetch('https://api.github.com').then(resp => {
+  //We access the response json file with resp.json and this also returns a promise cause it is the response and it is asynchronus, so we need to define .then to access the data, and the callback function.
+   resp.json().then(data => {
+    console.log(data);
+   });
+ });
+};
+```
+Now the modern way to consume asynchronous data is to use async and await keywords, for more readability.
+
+```js
+
+//To make the wait calls, we need to label the function as async
+const fetchData = async () => {
+//we await the asynchronous call that returns a promise
+  const resp = await fetch('https://api.github.com');
+//
+  const data = await resp.json();
+  console.log(data);
+};
+
+fetchData();
+```
