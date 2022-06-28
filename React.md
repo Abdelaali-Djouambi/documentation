@@ -3,10 +3,10 @@
 In this document we will have a synthese of new features of modern javascript crash course exposed in pluralsight course React: getting started
 
 # React class based component
-##### 1. Defining components tree:
+##### Defining components tree:
 The point to start with in a react application or view, we need to detect our components, this can change with time.
 
-## Creating an app using class components
+### Creating an app using class components
 ##### 1. Class syntax for components:
 To define a class for a component, we define a simple class, and then we extend React.Component class, this extending makes the app a java script class and a react component. Class components map data to view, the two main concepts to do so are constructor and this keyword.
 A class compoent also needs a render function, this render function returns the virtual dom description of the component.
@@ -136,7 +136,7 @@ const CardList = (props) => {
 };
 ```
 
-##### 3. Initializing and reading the state object:
+##### 4. Initializing and reading the state object:
 In the example, we want to fetch the user to display its card, by adding new component with a form, an input and a button. The form component will be displayed by adding it to the App component, because its logic is different from the CardList component, and both components need to share the profiles data (we wont be using the static dataList from each component, we will set it in the parrent and send it to the child components), so the profiles data array needs to be passed to the App component state, so it can be accessed by its child compoenents.
 Given a new Form component for our form, the modification to be made to the App component to add the testData list to its state are the followings :
 
@@ -170,7 +170,7 @@ class App extends React.Component {
 }
 ```
 
-##### 4. Taking input:
+##### 5. Taking input:
  * Reading inputs from the DOM using ref:
  In our form we will define the behavior of onSubmit the form, by preventing the default submit behavior (refresh the page), and getting the value from our input.
 In react we can access html dom elements using the ref={} that gives each element a unique id, to do so we need to instanciate an object, and its value is the following:
@@ -224,7 +224,7 @@ userNameInput = React.createRef();
 }
  ```
 
- ##### 5. Passing data from child component to parent component using a function:
+ ##### 6. Passing data from child component to parent component using a function:
  In the last example, we got a form that has an input to fetch a profile data from github, and then show it.
  For now we made react handle the input element, so that we know the state of the input, and what we need to do now is fetch a profile using the value of the input after clicking on the submit button, and then pass it to our app component.
  To do, react gives the possibility to pass a function from parent component to child component, so that the child component can pass data to the parent using that function.
@@ -275,7 +275,7 @@ class App extends React.Component {
   }	
 }
 ```
- ##### 6. Adding data to state data:
+ ##### 7. Adding data to state data:
  Now that we sent our data (searched github profile) from child component Form to parent component App, we need to add it to the list of profiles that we have in the state of the App component, to do so we need to set the state of the app and update it by adding our profile element to the profiles list in the state.
  ```js
  class Form extends React.Component {
@@ -324,7 +324,7 @@ class App extends React.Component {
   }	
 }
  ```
-##### 7. Keys to list of Components :
+##### 8. Keys to list of Components :
 In the console of the browser we can see this :
 ```diff
 -Warning: Each child in a list should have a unique "key" prop.
