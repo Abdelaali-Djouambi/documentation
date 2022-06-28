@@ -144,10 +144,11 @@ Sub-module POM file:
 
 ###### Maven goals
 
+- Build : Compile and package your product build and put it in the target.
 - Validate : validate the project is correct and all necessary information is available
 - Compile : compile the source code of the project
 - Test : test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
 - Package : take the compiled code and package it in its distributable format, such as a JAR.
 - Verify : run any checks on results of integration tests to ensure quality criteria are met
-- Install : Compile and package your product build and also install the package into the local repository, for use as a dependency in other projects locally
+- Install : Build + install the package into the local repository, for use as a dependency in other projects locally
 - Deploy : done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
